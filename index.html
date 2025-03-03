@@ -11,23 +11,25 @@
             background: linear-gradient(to bottom, #ffffff, #b8860b);
             color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
+            align-items: flex-start; /* 讓內容頂部對齊，避免卡住 */
+            min-height: 100vh;
+            overflow-y: auto; /* 允許滾動 */
         }
 
         /* 主要內容區塊 */
         .container {
             max-width: 600px;
+            width: 100%;
             background: rgba(255, 255, 255, 0.9);
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             text-align: left;
             position: relative;
+            overflow: auto; /* 允許內部滾動 */
         }
 
         /* 頭像 - 固定在右上角 */
@@ -129,6 +131,7 @@
     </div>
 </body>
 </html>
+
 
 
 
