@@ -7,10 +7,32 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            padding: 20px;
-            max-width: 800px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         h1, h2 {
             color: #333;
@@ -19,23 +41,20 @@
         }
         .contact-info, .education, .skills, .projects {
             margin-bottom: 20px;
+            text-align: left;
         }
         .contact-info p, .education p, .skills p {
             margin: 5px 0;
         }
         ul {
             padding-left: 20px;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="pic.jpg" alt="Profile Picture" class="profile-pic">
         <h1>Shaowei Huang</h1>
         <div class="contact-info">
             <p><strong>Email:</strong> <a href="mailto:rich54598794@gmail.com">rich54598794@gmail.com</a></p>
@@ -93,9 +112,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
