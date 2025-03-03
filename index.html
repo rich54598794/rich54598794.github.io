@@ -8,35 +8,41 @@
         /* 讓整個內容垂直與水平置中 */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f7f7f7, #e6d7be);
-            color: #333; /* 字體改深色 */
+            background: linear-gradient(to right, #b8860b, #8b6508); /* 深金色漸層 */
+            color: #333; /* 深色字體 */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center; /* 水平置中 */
             align-items: center; /* 垂直置中 */
             height: 100vh; /* 讓內容填滿整個畫面 */
-            text-align: center;
         }
 
-        /* 內容區塊 */
+        /* 主要內容區塊 (排版: 文字左，頭像右) */
         .container {
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.8); /* 調整透明度，讓字體更清楚 */
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9); /* 白色背景，略透明 */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
         }
 
-        /* 頭像 (圓形，不會變形) */
+        /* 文字區塊 */
+        .text-content {
+            flex: 1;
+            text-align: left; /* 文字靠左 */
+            padding-right: 20px;
+        }
+
+        /* 頭像區塊 */
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 4px solid white;
-            display: block; /* 確保圖片獨立顯示 */
             object-fit: cover; /* 確保圖片不變形 */
-            margin: 0 auto 10px; /* 置中 */
         }
 
         /* 連結按鈕 */
@@ -56,41 +62,45 @@
         }
 
         /* 響應式設計 (適用於手機) */
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .container {
-                width: 90%;
-                padding: 20px;
+                flex-direction: column; /* 變成上下排列 */
+                text-align: center; /* 讓內容居中 */
             }
-            h1 {
-                font-size: 2em;
+            .text-content {
+                padding-right: 0;
+                text-align: center;
             }
-            p {
-                font-size: 1em;
+            .profile-pic {
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 加入個人頭像 -->
+        <!-- 文字內容 (左側) -->
+        <div class="text-content">
+            <h1>Hello, I'm Rich Huang! 🚀</h1>
+            <p>Welcome to my personal website hosted on GitHub Pages.</p>
+            
+            <h2>📌 About Me</h2>
+            <p>I am passionate about finance, quantitative analysis, and technology.</p>
+
+            <h2>💼 Projects</h2>
+            <ul>
+                <li><a href="https://github.com/rich54598794/Indian-growth-stock-mutual-fund" target="_blank">
+                    Project 1: Indian Stock Fund Construction and Analysis</a></li>
+            </ul>
+
+            <h2>📬 Contact</h2>
+            <p>Email: rich54598794@gmail.com</p>
+
+            <a class="btn" href="https://github.com/rich54598794" target="_blank">Visit My GitHub</a>
+        </div>
+
+        <!-- 頭像 (右側) -->
         <img src="pic.jpg" alt="Rich Huang" class="profile-pic">
-
-        <h1>Hello, I'm Rich Huang! 🚀</h1>
-        <p>Welcome to my personal website hosted on GitHub Pages.</p>
-        
-        <h2>📌 About Me</h2>
-        <p>I am passionate about finance, quantitative analysis, and technology.</p>
-
-        <h2>💼 Projects</h2>
-        <ul>
-            <li><a href="https://github.com/rich54598794/Indian-growth-stock-mutual-fund" target="_blank">
-                Project 1: Indian Stock Fund Construction and Analysis</a></li>
-        </ul>
-
-        <h2>📬 Contact</h2>
-        <p>Email: rich54598794@gmail.com</p>
-
-        <a class="btn" href="https://github.com/rich54598794" target="_blank">Visit My GitHub</a>
     </div>
 </body>
 </html>
