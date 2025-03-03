@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #f7f7f7, #e6d7be);
-            color: white;
+            color: #333; /* 字體改深色 */
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,19 +22,21 @@
         /* 內容區塊 */
         .container {
             max-width: 600px;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.8); /* 調整透明度，讓字體更清楚 */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* 頭像 (圓形) */
+        /* 頭像 (圓形，不會變形) */
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 4px solid white;
-            margin-top: 10px;
+            display: block; /* 確保圖片獨立顯示 */
+            object-fit: cover; /* 確保圖片不變形 */
+            margin: 0 auto 10px; /* 置中 */
         }
 
         /* 連結按鈕 */
@@ -92,3 +94,4 @@
     </div>
 </body>
 </html>
+
