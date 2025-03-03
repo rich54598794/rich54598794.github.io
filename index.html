@@ -5,44 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My GitHub Page</title>
     <style>
-        /* 讓整個內容垂直與水平置中 */
+        /* 背景：白色 → 深金色漸層 */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #b8860b, #8b6508); /* 深金色漸層 */
-            color: #333; /* 深色字體 */
+            background: linear-gradient(to bottom, #ffffff, #b8860b);
+            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* 水平置中 */
-            align-items: center; /* 垂直置中 */
-            height: 100vh; /* 讓內容填滿整個畫面 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
         }
 
-        /* 主要內容區塊 (排版: 文字左，頭像右) */
+        /* 主要內容區塊 */
         .container {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9); /* 白色背景，略透明 */
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            max-width: 700px;
+            text-align: left;
+            position: relative; /* 保證內部元素可使用相對定位 */
         }
 
-        /* 文字區塊 */
-        .text-content {
-            flex: 1;
-            text-align: left; /* 文字靠左 */
-            padding-right: 20px;
-        }
-
-        /* 頭像區塊 */
+        /* 頭像 - 固定在右上角 */
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 4px solid white;
-            object-fit: cover; /* 確保圖片不變形 */
+            object-fit: cover;
+            position: absolute;
+            top: -40px;  /* 上移，讓它浮在外面 */
+            right: -40px; /* 右移 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         /* 連結按鈕 */
@@ -62,45 +60,41 @@
         }
 
         /* 響應式設計 (適用於手機) */
-        @media (max-width: 700px) {
+        @media (max-width: 600px) {
             .container {
-                flex-direction: column; /* 變成上下排列 */
-                text-align: center; /* 讓內容居中 */
-            }
-            .text-content {
-                padding-right: 0;
-                text-align: center;
+                width: 90%;
+                padding: 20px;
             }
             .profile-pic {
-                margin-top: 20px;
+                width: 100px;
+                height: 100px;
+                top: -30px;
+                right: -30px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 文字內容 (左側) -->
-        <div class="text-content">
-            <h1>Hello, I'm Rich Huang! 🚀</h1>
-            <p>Welcome to my personal website hosted on GitHub Pages.</p>
-            
-            <h2>📌 About Me</h2>
-            <p>I am passionate about finance, quantitative analysis, and technology.</p>
-
-            <h2>💼 Projects</h2>
-            <ul>
-                <li><a href="https://github.com/rich54598794/Indian-growth-stock-mutual-fund" target="_blank">
-                    Project 1: Indian Stock Fund Construction and Analysis</a></li>
-            </ul>
-
-            <h2>📬 Contact</h2>
-            <p>Email: rich54598794@gmail.com</p>
-
-            <a class="btn" href="https://github.com/rich54598794" target="_blank">Visit My GitHub</a>
-        </div>
-
-        <!-- 頭像 (右側) -->
+        <!-- 大頭照 (右上角) -->
         <img src="pic.jpg" alt="Rich Huang" class="profile-pic">
+
+        <h1>Hello, I'm Rich Huang! 🚀</h1>
+        <p>Welcome to my personal website hosted on GitHub Pages.</p>
+        
+        <h2>📌 About Me</h2>
+        <p>I am passionate about finance, quantitative analysis, and technology.</p>
+
+        <h2>💼 Projects</h2>
+        <ul>
+            <li><a href="https://github.com/rich54598794/Indian-growth-stock-mutual-fund" target="_blank">
+                Project 1: Indian Stock Fund Construction and Analysis</a></li>
+        </ul>
+
+        <h2>📬 Contact</h2>
+        <p>Email: rich54598794@gmail.com</p>
+
+        <a class="btn" href="https://github.com/rich54598794" target="_blank">Visit My GitHub</a>
     </div>
 </body>
 </html>
